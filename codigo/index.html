@@ -1,0 +1,133 @@
+<!DOCTYPE html>                                                               <!-- Archivo: index.html -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Configuración de la meta etiqueta para asegurar que el sitio sea responsive en dispositivos móviles -->
+  <title>TodoFP Moderno</title>
+  <link rel="stylesheet" href="estilos.css">                                  <!-- Enlace al archivo de estilos CSS para aplicar el diseño moderno al sitio web -->                
+</head>
+<body>
+
+  <header class="header">                                                     <!-- Encabezado del sitio que contiene el logo, la navegación y el botón de menú para dispositivos móviles -->            
+    <a href="#inicio" class="logo">
+      <img src="../img/logo.png" alt="Logo TodoFP">
+    </a>
+
+    <nav class="nav" id="nav">                                              <!-- Navegación principal del sitio con enlaces a las diferentes secciones, diseñada para ser responsive y adaptarse a diferentes tamaños de pantalla -->
+      <a href="#inicio">Inicio</a>
+      <a href="#informacion">Información</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#alumnos">Alumnos</a>
+      <a href="#ayuda">Ayuda</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>  <!-- Botón de menú para dispositivos móviles que permite mostrar u ocultar la navegación principal, mejorando la usabilidad en pantallas pequeñas -->
+  </header>
+
+  <section class="hero" id="inicio">                                           <!-- Sección principal de bienvenida del sitio, con un fondo llamativo y un mensaje de bienvenida para los visitantes, diseñada para captar la atención y proporcionar una introducción clara al propósito del sitio web -->
+    <div class="hero-overlay">
+      <h1 class="fade">Bienvenido a TodoFP</h1>
+      <p class="fade delay">Tu espacio de formación profesional moderna</p>
+      <a href="#cursos" class="btn fade delay2">Ver cursos</a>
+    </div>
+  </section>
+
+  <main class="contenedor-principal">                                     <!-- Contenedor principal que organiza el contenido en una estructura de columnas, con áreas para usuarios, contenido central y recursos adicionales, diseñado para ser responsive y adaptarse a diferentes tamaños de pantalla --> 
+    <aside class="columna izquierda reveal">
+      <section class="panel">
+        <h2>Área de usuarios</h2>
+        <form>
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario">
+
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password">
+
+          <button type="submit">Acceder</button>
+        </form>
+      </section>
+
+      <section class="panel">                                            <!-- Panel lateral izquierdo que contiene un formulario de inicio de sesión para usuarios registrados, proporcionando una forma fácil y accesible para que los usuarios accedan a su cuenta y a los recursos personalizados del sitio web -->
+        <h2>Unidades de trabajo</h2>
+        <ul>
+          <li>Planificación de interfaces</li>
+          <li>Accesibilidad web</li>
+          <li>Usabilidad web</li>
+          <li>Hojas de estilo</li>
+        </ul>
+      </section>
+    </aside>
+
+    <section class="contenido-central">                                 <!-- Sección central del sitio que presenta el contenido principal, incluyendo información sobre la oferta de formación profesional, detalles de los cursos disponibles, recursos multimedia y estadísticas relevantes, diseñada para ser atractiva y fácil de navegar para los visitantes -->
+      <article class="card reveal" id="informacion">
+        <h2>Bienvenido a TodoFP</h2>
+        <p>
+          Esta oferta está dirigida a personas que desean cursar formación profesional
+          de forma presencial o a distancia.
+        </p>
+        <img src="../img/fp1.jpg" alt="Estudiantes de formación profesional">
+      </article>
+
+      <article class="card reveal" id="cursos">
+        <h2>DIW04. Hojas de estilo</h2>
+        <p>
+          Aprenderás a crear y vincular hojas de estilo externas, aplicar clases,
+          trabajar con diseño visual y mejorar la presentación de páginas web.
+        </p>
+        <video controls preload="metadata">
+          <source src="../media/presentacion.mp4" type="video/mp4">
+          Tu navegador no soporta vídeo.
+        </video>
+      </article>
+
+      <article class="card reveal" id="alumnos">
+        <h2>Recursos multimedia</h2>
+        <p>Explora materiales audiovisuales relacionados con la formación profesional.</p>
+        <audio controls preload="metadata">
+          <source src="../media/bienvenida.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+      </article>
+
+      <article class="stats reveal">
+        <div class="stat">
+          <span class="counter" data-target="25">0</span>
+          <p>Cursos</p>
+        </div>
+        <div class="stat">
+          <span class="counter" data-target="320">0</span>
+          <p>Alumnos</p>
+        </div>
+        <div class="stat">
+          <span class="counter" data-target="18">0</span>
+          <p>Módulos</p>
+        </div>
+      </article>
+    </section>
+
+    <aside class="columna derecha reveal">                             <!-- Panel lateral derecho que proporciona recursos adicionales, enlaces a sitios web de interés relacionados con la formación profesional, y un área destacada para resaltar información importante o promociones especiales, diseñada para complementar el contenido principal y ofrecer valor añadido a los visitantes del sitio web --> 
+      <section class="panel">
+        <h2>Webs de interés</h2>
+        <ul>
+          <li><a href="#">TodoFP</a></li>
+          <li><a href="#">FP Online</a></li>
+          <li><a href="#">Platega</a></li>
+        </ul>
+      </section>
+
+      <section class="panel">                                       <!-- Panel lateral derecho que incluye una sección destacada con una imagen relevante, diseñada para captar la atención de los visitantes y resaltar información importante o promociones especiales relacionadas con la formación profesional, proporcionando un elemento visual atractivo que complementa el contenido del sitio web -->
+        <h2>Destacado</h2>
+        <img src="../img/fp2.jpg" alt="Recursos destacados">
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer" id="ayuda">                          <!-- Pie de página del sitio que contiene información de contacto, enlaces a redes sociales, y un mensaje de derechos de autor, diseñado para proporcionar a los visitantes una forma fácil de obtener ayuda o ponerse en contacto con el equipo de TodoFP, así como para reforzar la identidad de la marca y ofrecer información legal relevante sobre el sitio web --> 
+    <p>© 2026 TodoFP - Proyecto académico de diseño web</p>
+  </footer>
+
+  <button id="btn-top" aria-label="Volver arriba">↑</button>    <!-- Botón para volver al inicio de la página, que se muestra cuando el usuario hace scroll hacia abajo, mejorando la navegación y la experiencia del usuario al permitir un acceso rápido a la parte superior del sitio web -->
+
+  <script src="script.js"></script>             <!-- Enlace al archivo de JavaScript que contiene la lógica para las interacciones del sitio, como la animación de los contadores, el menú responsive y el botón de volver al inicio, proporcionando una experiencia de usuario dinámica y mejorada en el sitio web -->
+</body>
+</html>

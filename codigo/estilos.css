@@ -1,0 +1,351 @@
+/* =========================
+   1. RESET Y CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f8f0;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =========================
+   2. SELECTORES DE TIPO
+========================= */
+
+header {
+  background-color: #7bbd2a;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer {
+  background-color: #7bbd2a;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  color: #5d961b;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* =========================
+   3. HEADER Y NAVEGACIÓN
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+.nav a {
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   4. HERO
+========================= */
+
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url('../img/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   5. BOTONES
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #7bbd2a;
+  color: white;
+  border-radius: 30px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #5d961b;
+}
+
+form button {
+  background: #7bbd2a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   6. MAQUETACIÓN PRINCIPAL
+========================= */
+
+.contenedor-principal {
+  padding: 30px;
+}
+
+.panel,
+.card,
+.stats {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.panel:hover,
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.panel ul li {
+  margin-bottom: 10px;
+}
+
+.panel a {
+  color: #3d6f10;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5d961b;
+}
+
+/* =========================
+   7. FOOTER Y BOTÓN SUPERIOR
+========================= */
+
+.footer {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#btn-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #7bbd2a;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+/* =========================
+   8. ANIMACIONES
+========================= */
+
+.fade {
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay {
+  animation-delay: 0.3s;
+}
+
+.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   9. RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #7bbd2a;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
